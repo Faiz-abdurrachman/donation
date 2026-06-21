@@ -10,16 +10,16 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b-8 border-black bg-[#00E5FF] px-4 py-4 sm:px-6 lg:px-8 shadow-brutal-sm">
+    <header className="sticky top-0 z-50 border-b-4 border-black bg-[#00E5FF] px-4 py-4 sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
-        <div className="flex items-center gap-3 transition-transform hover:scale-105 hover:-rotate-3">
-          <div className="flex h-12 w-12 items-center justify-center border-4 border-black bg-[#FF3300] shadow-brutal-sm">
+        <div className="group flex items-center gap-3 transition-transform hover:-translate-y-1">
+          <div className="flex h-10 w-10 items-center justify-center border-2 border-black bg-[#FF3300] shadow-brutal-sm group-hover:shadow-brutal transition-shadow">
             <svg
-              className="h-6 w-6 text-white"
+              className="h-5 w-5 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth={4}
+              strokeWidth={3}
             >
               <path
                 strokeLinecap="square"
@@ -28,14 +28,14 @@ export default function Header() {
               />
             </svg>
           </div>
-          <span className="text-2xl font-black uppercase tracking-tighter text-black">
+          <span className="text-2xl font-black uppercase tracking-tight text-black">
             Stellar<span className="text-white drop-shadow-[2px_2px_0_rgba(0,0,0,1)]">Zap</span>
           </span>
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="hidden items-center gap-2 border-4 border-black bg-[#FFDE59] px-3 py-1.5 text-xs font-black uppercase text-black shadow-brutal-sm sm:flex rotate-2 hover:rotate-0 transition-transform">
-            <span className="h-3 w-3 animate-ping bg-[#FF3300] border-2 border-black" />
+          <div className="hidden items-center gap-2 border-2 border-black bg-[#FFDE59] px-3 py-1.5 text-xs font-black uppercase text-black shadow-brutal-sm sm:flex transform transition-transform hover:rotate-2">
+            <span className="h-2 w-2 animate-ping bg-[#FF3300] border border-black" />
             Testnet Mode
           </div>
 
@@ -44,18 +44,18 @@ export default function Header() {
               href="https://freighter.app"
               target="_blank"
               rel="noreferrer"
-              className="border-4 border-black bg-[#FF3300] px-5 py-2.5 text-lg font-black uppercase text-white transition-all hover:-translate-y-1 hover:-translate-x-1 hover:shadow-brutal active:translate-x-0 active:translate-y-0 active:shadow-none -rotate-1"
+              className="border-2 border-black bg-[#FF3300] px-5 py-2 text-sm font-black uppercase text-white transition-all hover:-translate-y-1 hover:-translate-x-1 hover:shadow-brutal active:translate-x-0 active:translate-y-0 active:shadow-none"
             >
               Get Freighter
             </a>
           ) : address ? (
-            <div className="border-4 border-black bg-white px-5 py-2.5 text-lg font-black uppercase text-black shadow-brutal hover:bg-[#FFDE59] transition-colors cursor-pointer">
+            <div className="border-2 border-black bg-white px-5 py-2 text-sm font-black uppercase text-black shadow-brutal hover:bg-[#FFDE59] transition-colors cursor-pointer">
               {shortenAddress(address)}
             </div>
           ) : (
             <button
               onClick={connect}
-              className="border-4 border-black bg-[#FFDE59] px-5 py-2.5 text-lg font-black uppercase text-black transition-all hover:-translate-y-1 hover:-translate-x-1 hover:shadow-brutal active:translate-x-0 active:translate-y-0 active:shadow-none hover:-rotate-2"
+              className="border-2 border-black bg-[#FFDE59] px-5 py-2 text-sm font-black uppercase text-black transition-all hover:-translate-y-1 hover:-translate-x-1 hover:shadow-brutal active:translate-x-0 active:translate-y-0 active:shadow-none"
             >
               Connect Wallet
             </button>

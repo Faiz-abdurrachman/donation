@@ -14,8 +14,9 @@
 
 body {
   background-color: #FFDE59;
-  background-image: radial-gradient(#000000 1px, transparent 1px);
-  background-size: 20px 20px;
+  /* Make the dots more subtle and neat */
+  background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--color-foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,13 +32,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Playful Neo Brutalist shadows */
+/* Neat but playful Neo Brutalist shadows */
 @utility shadow-brutal {
-  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }
 @utility shadow-brutal-lg {
-  box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
 }
 @utility shadow-brutal-sm {
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
 }
