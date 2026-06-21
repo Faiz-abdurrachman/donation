@@ -2,9 +2,10 @@ import { rpc, Contract, Account, TransactionBuilder, scValToNative, nativeToScVa
 import { signTransaction } from "@stellar/freighter-api";
 import type { Donation } from "./types";
 
-export const CONTRACT_ID = "CDNBJG3SKPFMHTDD7WRIOUYXHSH7QFFEJG64FX3O7QRKWXTYOSNKG56A";
-export const NETWORK_PASSPHRASE = Networks.TESTNET;
-export const RPC_URL = "https://soroban-testnet.stellar.org";
+export const CONTRACT_ID = process.env.NEXT_PUBLIC_CONTRACT_ID || "CDNBJG3SKPFMHTDD7WRIOUYXHSH7QFFEJG64FX3O7QRKWXTYOSNKG56A";
+export const NETWORK_PASSPHRASE = process.env.NEXT_PUBLIC_STELLAR_PASSPHRASE || Networks.TESTNET;
+export const RPC_URL = process.env.NEXT_PUBLIC_STELLAR_RPC_URL || "https://soroban-testnet.stellar.org";
+export const NETWORK_NAME = process.env.NEXT_PUBLIC_STELLAR_NETWORK || "TESTNET";
 
 export const server = new rpc.Server(RPC_URL);
 const contract = new Contract(CONTRACT_ID);

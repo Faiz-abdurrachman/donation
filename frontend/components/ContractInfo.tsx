@@ -1,6 +1,6 @@
 "use client";
 
-const CONTRACT_ID = "CDNBJG3SKPFMHTDD7WRIOUYXHSH7QFFEJG64FX3O7QRKWXTYOSNKG56A";
+import { CONTRACT_ID, NETWORK_NAME } from "@/lib/stellar";
 
 const contractFunctions = [
   { name: "donate()", description: "Submit transaction payload" },
@@ -50,9 +50,9 @@ export default function ContractInfo() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="border-2 border-black p-4 bg-[#00E5FF] shadow-brutal-sm">
-                  <p className="text-xs font-black uppercase tracking-widest text-black">Network</p>
-                  <p className="mt-1 text-lg font-black text-white bg-black px-2 py-0.5 inline-block">TESTNET</p>
-                </div>
+                <p className="text-xs font-black uppercase tracking-widest text-black">Network</p>
+                <p className="mt-1 text-lg font-black text-white bg-black px-2 py-0.5 inline-block">{NETWORK_NAME}</p>
+              </div>
 
                 <div className="border-2 border-black p-4 bg-[#FF3300] shadow-brutal-sm">
                   <p className="text-xs font-black uppercase tracking-widest text-black">Runtime</p>
